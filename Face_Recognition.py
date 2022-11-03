@@ -20,7 +20,7 @@ inputFolder = 'Images'
 
 '''https://stackoverflow.com/questions/74244841/resizing-a-
 folder-of-images-and-saving-it-with-the-same-name-in-a-different-fold'''
-for img in glob.glob(inputFolder + "/*.jpg"):
+for img in glob.glob(inputFolder + "/*.jpeg"):
     image = cv2.imread(img)
     h = image
     imgResized = cv2.resize(image, (300, 400))
