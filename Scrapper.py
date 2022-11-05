@@ -1,0 +1,79 @@
+from bs4 import BeautifulSoup
+import requests
+from csv import writer
+import csv
+import os
+import pandas as pd
+
+url = "https://zahinfyz.github.io/Nsu-Student-Database.github.io/"
+
+request_web_page = requests.get(url)
+soup = BeautifulSoup(request_web_page.text , 'html.parser')
+#print(soup)
+
+
+
+#First Task get all the images
+
+images = soup.find_all('img')
+#print(images)
+
+try:
+    #Either you make a directory
+    os.mkdir(os.path.join(os.getcwd(), 'Images'))
+except:
+    pass
+#Or write to an existing one
+os.chdir(os.path.join(os.getcwd(), 'Images'))
+
+for image in images :
+    name = image['src'][9:-5]
+    link = 'https://zahinfyz.github.io/Nsu-Student-Database.github.io'+image['src'][1:23]
+    #print(name)
+    #print(link)
+    with open(name + '.jpeg', 'wb') as f:
+        im = requests.get(link)
+        f.write(im.content )
+        print('Writing: ', name)
+
+
+
+os.chdir(r"F:\This Semester\Python\Projects\Face Recognition")
+web_page = BeautifulSoup(request_web_page.content , 'html.parser')
+wl = [web_page]
+#print(wl)
+
+lists = soup.find_all('td')
+
+with open('Student Database.csv', 'w', encoding='utf8', newline='') as f:
+    thewriter = writer(f)
+    header = ['Sl', 'Image', 'Name', 'Email' , 'ID','Phone']
+    thewriter.writerow(header)
+    i = 0
+    for list in range(500):
+        sl = lists[i].text
+        i = i+1 ;
+        image = lists[i].text
+        i = i + 1;
+        name = lists[i].text
+        i = i + 1;
+        email = lists[i].text
+        i = i + 1;
+        id = str(lists[i].text)
+        i = i + 1;
+        phone = lists[i].text
+        i = i + 1;
+
+        info = [sl , image , name , email , id, phone]
+        thewriter.writerow(info)
+
+f=pd.read_csv("Student Database.csv")
+keep_col = ['Name','Email','ID','Phone']
+new_f = f[keep_col]
+new_f.to_csv("Student Database.csv", index=False)
+
+
+#for list in lists :
+    #title = list.find('tr')
+    #title1 = list.find('td')
+    #print(title)'''
