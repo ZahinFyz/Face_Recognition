@@ -1533,6 +1533,12 @@ with open('Faculty Database.csv', 'w', encoding='utf8', newline='') as f:
 
 
 
+import Scrapper
+
+
+
+
+
 
 
 
