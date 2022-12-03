@@ -1395,9 +1395,6 @@ def get_pbh_faculty_details(url_pbh):
 
 
 
-
-
-
 def write_data() :
     os.chdir(r"F:\This Semester\Python\Projects\Face Recognition")
     info = [faculty_name, faculty_email, faculty_numb, dept]
@@ -1407,7 +1404,6 @@ with open('Faculty Database.csv', 'w', encoding='utf8', newline='') as f:
     thewriter = writer(f)
     header = ['Name', 'Email' , 'Phone' , 'Department']
     thewriter.writerow(header)
-
 
     #For the ece department
     i = 0
