@@ -1530,9 +1530,6 @@ with open('Faculty Database.csv', 'w', encoding='utf8', newline='') as f:
       write_data()
 
 
-
-
-
 import Scrapper
 
 
