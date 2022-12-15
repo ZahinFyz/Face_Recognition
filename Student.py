@@ -71,4 +71,4 @@ keep_col = ['Name','Email','ID','Phone']
 new_f = f[keep_col]
 new_f.to_csv("Student Database.csv", index=False)
 
-import Facial_Data
+#import Facial_Data
