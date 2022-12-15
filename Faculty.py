@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import re
 
-
+d = os.getcwd()
 #For the ECE dept
 #For the ECE dept
 #For the ECE dept
@@ -1394,9 +1394,8 @@ def get_pbh_faculty_details(url_pbh):
 
 
 
-
 def write_data() :
-    os.chdir(r"F:\This Semester\Python\Projects\Face Recognition")
+    os.chdir(d)
     info = [faculty_name, faculty_email, faculty_numb, dept]
     thewriter.writerow(info)
 

@@ -8,7 +8,7 @@ a = Analysis(
     ['home.py'],
     pathex=[],
     binaries=[('F:\\This Semester\\Python\\Lib\\site-packages\\face_recognition_models', 'face_recognition_models')],
-    datas=[('F:\\This Semester\\Python\\Projects\\Face Recognition\\giphy.gif', '.')],
+    datas=[('F:\\This Semester\\Python\\Projects\\Face Recognition\\giphy.gif', '.') , ('F:\\This Semester\\Python\\Projects\\Face Recognition\\temp2.png', '.') , ('F:\\This Semester\\Python\\Projects\\Face Recognition\\temp4.png', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

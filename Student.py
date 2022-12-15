@@ -15,6 +15,7 @@ soup = BeautifulSoup(request_web_page.text , 'html.parser')
 #First Task get all the images
 images = soup.find_all('img')
 x = os.getcwd()
+print(x)
 #making or directring to existing folder
 try:
     #Either you make a directory
