@@ -11,6 +11,7 @@ app = Tk()
 app.geometry("1280x800")
 app.resizable(False , False)
 app.config(background = 'black')
+app.title("VISION")
 
 #Frames
 data_frame = Frame(app , height=1280 , width= 350 , bg= "#156286" , bd = 2 ,relief= RAISED)

@@ -15,7 +15,8 @@ import pickle
 
 downloaded_images_folder = 'Images'
 resized_images_folder = 'Images_r'
-x = os.chdir(r"F:\This Semester\Python\Projects\Face Recognition")
+#x = os.chdir(r"F:\This Semester\Python\Projects\Face Recognition")
+x = os.getcwd()
 binary_images = []
 name_of_people = []
 knownEncodedList = []
