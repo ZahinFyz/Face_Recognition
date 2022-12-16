@@ -1,13 +1,28 @@
-pyi-makespec home.py
+**Home to make a spec file without executable :
+pyi-makespec Vision.py
 
-pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models\models\shape_predictor_68_face_landmarks.dat' home.py
 
-pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models;.' home.py
 
+**Terminal command to add gif(data) :
+pyinstaller --add-data 'F:\This Semester\Python\Projects\Face Recognition\giphy.gif;.' home.py
+
+**Edit spec file to add gif(data): 
+('F:\\This Semester\\Python\\Projects\\Face Recognition\\giphy.gif', '.')
+
+
+
+**Terminal command to add binary data (into main / new folder) : 
+pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models;.' home.py 
 pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models;face_recognition_models' home.py
 
-('F:\\This Semester\\Python\\Projects\\Face Recognition\\giphy.gif', '.')
+**Edit Spec file to add binary data : 
 ('F:\\This Semester\\Python\\Lib\\site-packages\\face_recognition_models', 'face_recognition_models')
 
-pyinstaller --add-data 'F:\This Semester\Python\Projects\Face Recognition\giphy.gif;.' home.py
-pyinstaller --add-data 'src/README.txt:.' myscript.py
+
+
+    binaries=[('F:\\This Semester\\Python\\Lib\\site-packages\\face_recognition_models', 'face_recognition_models')],
+    datas=[('F:\\This Semester\\Python\\Projects\\Face Recognition\\giphy.gif', '.') , ('F:\\This Semester\\Python\\Projects\\Face Recognition\\temp2.png', '.') , ('F:\\This Semester\\Python\\Projects\\Face Recognition\\temp4.png', '.')],
+
+pyinstaller --icon 'F:\This Semester\Python\Projects\Face Recognition\eye.ico;.' Vision.py
+
+pyi-makespec --icon=eye.ico Vision.py
