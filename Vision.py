@@ -11,6 +11,8 @@ app = Tk()
 app.geometry("1280x800")
 app.resizable(False , False)
 app.config(background = 'black')
+p1 = PhotoImage(file='eye.png')
+app.iconphoto(False, p1)
 app.title("VISION")
 
 #Frames
@@ -61,7 +63,7 @@ def face():
 
 def face_encoding():
     import Facial_Data
-    face()
+    start = Label(fg="#156286", bg='#156286',command=threading.Thread(target=face).start())
 
 def encode():
     for widget in app.winfo_children():
