@@ -1,0 +1,13 @@
+pyi-makespec home.py
+
+pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models\models\shape_predictor_68_face_landmarks.dat' home.py
+
+pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models;.' home.py
+
+pyinstaller --add-binary 'F:\This Semester\Python\Lib\site-packages\face_recognition_models;face_recognition_models' home.py
+
+('F:\\This Semester\\Python\\Projects\\Face Recognition\\giphy.gif', '.')
+('F:\\This Semester\\Python\\Lib\\site-packages\\face_recognition_models', 'face_recognition_models')
+
+pyinstaller --add-data 'F:\This Semester\Python\Projects\Face Recognition\giphy.gif;.' home.py
+pyinstaller --add-data 'src/README.txt:.' myscript.py
