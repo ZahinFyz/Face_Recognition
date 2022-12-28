@@ -43,7 +43,7 @@ def animation(count):
     anim = app.after(50,lambda :animation(count))
 
 gif_label = Label(image="")
-gif_label.place(x= 550 , y = 200)
+gif_label.place(x= 600 , y = 300)
 
 animation(count)
 

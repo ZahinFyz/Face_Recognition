@@ -1,6 +1,8 @@
 **Home to make a spec file without executable :
 pyi-makespec Vision.py
 
+**To execute spec file 
+pyinstaller Vision.spec
 
 
 **Terminal command to add gif(data) :
